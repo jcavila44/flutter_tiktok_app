@@ -13,7 +13,7 @@ class DiscoverProvider extends ChangeNotifier {
     await Future.delayed(const Duration(seconds: 2));
 
     final List<VideoPostEntity> newVideos = videoPosts
-        .map((video) => LocalVideoModel.fromJson(video).toVideoPostEntity())
+        .map((videoJson) => LocalVideoModel.fromJson(videoJson).toVideoPostEntity())
         .toList();
 
     videos.addAll(newVideos);

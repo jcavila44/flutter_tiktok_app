@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          lazy: false,
+          lazy: false, //Esto sirve para que ejecute sin pereza y dispare de una el notificador
           create: (_) => DiscoverProvider()..loadNextPage(),
         ),
       ],
